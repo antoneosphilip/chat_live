@@ -1,0 +1,5 @@
+-keep class **.zego.** { *; }
+-keep class **.**.zego_zpns.** { *; }
+-keep class com.github.chinloyal.pusher_client.** { *; }
+-keep class com.hyphenate.** {*;}
+-dontwarn  com.hyphenate.**
