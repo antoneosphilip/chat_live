@@ -30,7 +30,8 @@ class DirectorsItem extends StatelessWidget {
           width: 5.w,
         ),
         CustomNetworkImage(
-          image: '${AppConstants.mediaUrl}/profile/${admin.image}',
+          // ${AppConstants.mediaUrl}/profile/
+          image: '${admin.image}',
           width: 50.w,
           height: 50.w,
         ),

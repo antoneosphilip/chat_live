@@ -51,7 +51,9 @@ class _LevelScreenState extends State<LevelScreen>
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Image.network(
-                            '${AppConstants.baseUrl}/${element.image}',
+                            // ${AppConstants.baseUrl}/
+
+                            '${element.image}',
                             height: 20,
                             width: 60,
                           ),
@@ -68,7 +70,7 @@ class _LevelScreenState extends State<LevelScreen>
                               width: 50,
                               fit: BoxFit.fill,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 5,
                             ),
                             Text(
@@ -85,7 +87,7 @@ class _LevelScreenState extends State<LevelScreen>
               );
             },
           );
-          controller.consigneeLevelList.forEach(
+          controller.consigneeLevelListStatic.forEach(
             (element) {
               consigneeTableRows.add(
                 TableRow(
@@ -107,7 +109,8 @@ class _LevelScreenState extends State<LevelScreen>
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Image.network(
-                            '${AppConstants.baseUrl}/${element.image}',
+                            // ${AppConstants.baseUrl}/
+                            '${element.image}',
                             height: 20,
                             width: 60,
                           ),

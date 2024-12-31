@@ -23,7 +23,8 @@ class ShopUserImage extends StatelessWidget {
             CircleAvatar(
               radius: 35,
               backgroundImage: NetworkImage(
-                  "${AppConstants.mediaUrl}/profile/${Get.find<UserController>().userInfoModel?.image}"),
+                  // ${AppConstants.mediaUrl}/profile/
+                  "${Get.find<UserController>().userModelStatic?.image}"),
             ),
             Container(
               width: 120,

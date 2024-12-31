@@ -31,7 +31,8 @@ class UserDetailsGender extends StatelessWidget {
           ),
           CustomImage(
             image:
-            "${AppConstants.baseUrl}/${userController.userDetailsModelStatic?.consigneeLevel?.currentImage}",
+            //     ${AppConstants.baseUrl}/
+            "${userController.userDetailsModelStatic?.consigneeLevel?.currentImage}",
             width: 50,
           ),
           SizedBox(
@@ -39,7 +40,8 @@ class UserDetailsGender extends StatelessWidget {
           ),
           CustomImage(
             image:
-            "${AppConstants.baseUrl}/${userController.userDetailsModelStatic?.senderLevel?.currentImage}",
+            //     ${AppConstants.baseUrl}/
+            "${userController.userDetailsModelStatic?.senderLevel?.currentImage}",
             width: 50.w,
           ),
         ],

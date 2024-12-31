@@ -34,8 +34,8 @@ class _StoreHomeScreenState extends State<StoreHomeScreen> {
     return SafeArea(
       child: Scaffold(body: GetBuilder<StoreController>(
         builder: (storeController) {
-          return false
-            // storeController.loading
+          return
+            storeController.loading
               ? const LoadingIndicator()
               : Container(
                   height: Get.height,

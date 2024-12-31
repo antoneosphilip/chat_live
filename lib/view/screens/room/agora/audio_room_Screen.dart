@@ -34,8 +34,8 @@ class AudioRoomAgoraScreen extends StatelessWidget {
               //   userModel,
               //   room,
               // );
-              Navigator.pop(context);
             });
+            Navigator.pop(context);
             return true;
           },
           child: Scaffold(
@@ -54,7 +54,7 @@ class AudioRoomAgoraScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20.w),
-                  child: roomController.inRoom != null
+                  child: true
                       ? Column(
                           children: [
                             SizedBox(height: 20.h),
@@ -71,10 +71,10 @@ class AudioRoomAgoraScreen extends StatelessWidget {
                                 SizedBox(
                                   width: 50.w,
                                   child: ((room.isOwner!) ||
-                                      (roomController.inRoom!.chairs?[0].user != null))
+                                      (roomController.inRoomStatic!.chairs?[0].user != null))
                                       ? CustomOwnerItem(
-                                    roomModel: roomController.inRoom!,
-                                    chair: roomController.inRoom!.chairs?[0],
+                                    roomModel: roomController.inRoomStatic!,
+                                    chair: roomController.inRoomStatic!.chairs?[0],
                                   )
                                       : Container(
                                     width: 50.w, // Adjust width
@@ -83,7 +83,7 @@ class AudioRoomAgoraScreen extends StatelessWidget {
                                       shape: BoxShape.circle,
                                     ),
                                     child: CustomChair(
-                                      chair: roomController.inRoom!.chairs![0],
+                                      chair: roomController.inRoomStatic!.chairs![0],
                                       numberOfItem: 1,
                                       imageChair: 'assets/image/chair.webp',
                                     ),
@@ -99,13 +99,13 @@ class AudioRoomAgoraScreen extends StatelessWidget {
                                     child: Column(
                                       children: [
                                         SeatItem(
-                                          chair: roomController.inRoom!.chairs![1],
+                                          chair: roomController.inRoomStatic!.chairs![1],
                                           numberOfItem: 2,
                                             userModel:  controller.userModelStatic,
                                           roomModel: room,
                                           imageChair: 'assets/images/vip_chair.webp',
                                         ),
-                                        ((room.isOwner!) || (roomController.inRoom!.chairs?[0].user != null))
+                                        ((room.isOwner!) || (roomController.inRoomStatic!.chairs?[0].user != null))
                                             ? Padding(
                                           padding: const EdgeInsets.only(top: 4.0),
                                           child: Text(
@@ -142,14 +142,14 @@ class AudioRoomAgoraScreen extends StatelessWidget {
                                   ),
                                   padding: const EdgeInsets.all(0),
                                   itemCount:
-                                      roomController.inRoom!.chairs!.length - 2,
+                                      roomController.inRoomStatic!.chairs!.length - 2,
                                   itemBuilder: (context, index) {
                                     return SeatItem(
                                       numberOfItem: index + 3,
                                        userModel:  controller.userModelStatic,
                                       roomModel: room,
                                       chair: roomController
-                                          .inRoom!.chairs![index + 2],
+                                          .inRoomStatic!.chairs![index + 2],
                                     );
                                   },
                                 ),

@@ -25,7 +25,7 @@ class RoomDirectors extends StatelessWidget {
               builder: (RoomController roomController) {
                 return roomController.isLoading?
                 const LoadingIndicator():
-                roomController.showRoomModel!.showRoomData!=null?
+                roomController.showRoomModelStatic!.showRoomData!=null?
                 Column(
                   children: [
                     Row(
@@ -56,13 +56,13 @@ class RoomDirectors extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: 20.h,),
-                    roomController.showRoomModel!.showRoomData!.admins!.isNotEmpty?
+                    roomController.showRoomModelStatic!.showRoomData!.admins!.isNotEmpty?
                     ListView.separated(
                         itemBuilder: (context, index) {
-                      return DirectorsItem( admin: roomController.showRoomModel!.showRoomData!.admins![index], index: index,);
+                      return DirectorsItem( admin: roomController.showRoomModelStatic!.showRoomData!.admins![index], index: index,);
                     }, separatorBuilder: (context, index) {
                       return SizedBox(height: 15.h,);
-                    }, itemCount: roomController.showRoomModel!.showRoomData!.admins!.length,
+                    }, itemCount: roomController.showRoomModelStatic!.showRoomData!.admins!.length,
                     shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
                     ):

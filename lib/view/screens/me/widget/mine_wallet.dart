@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:live_app/controller/user_controller.dart';
@@ -53,14 +54,14 @@ class MineWallet extends StatelessWidget {
                             child: Row(
                               children: [
                                 Image(
-                                  width: 30,
-                                  height: 30,
+                                  width: 30.w,
+                                  height: 30.h,
                                   image: AssetImage(
                                     'assets/images/diamond_icon.webp',
                                   ),
                                 ),
                                 SizedBox(
-                                  width: 5,
+                                  width: 5.w,
                                 ),
                                 Text(
                                   '${userController.userModelStatic?.wallet?.diamond}',

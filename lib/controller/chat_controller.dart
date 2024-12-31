@@ -162,7 +162,7 @@ class ChatController extends GetxController implements GetxService {
             lName: "Mohamed",
             phone: "+20 1234567890",
             email: "ahmed.mohamed@example.com",
-            image: "users/ahmed_profile.jpg",
+            image: "https://www.bing.com/th?id=OIP.IGNf7GuQaCqz_RPq5wCkPgHaLH&w=150&h=225&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
             createdAt: "2024-12-01 00:00:00",
             updatedAt: "2024-12-27 10:30:00"
         ),
@@ -202,7 +202,7 @@ class ChatController extends GetxController implements GetxService {
             lName: "Hassan",
             phone: "+20 1234567892",
             email: "mahmoud.hassan@example.com",
-            image: "users/mahmoud_profile.jpg",
+            image: "https://www.bing.com/th?id=OIP.IGNf7GuQaCqz_RPq5wCkPgHaLH&w=150&h=225&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
             createdAt: "2024-12-01 00:00:00",
             updatedAt: "2024-12-27 09:45:00"
         ),

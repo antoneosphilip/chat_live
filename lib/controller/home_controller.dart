@@ -11,9 +11,9 @@ class HomeController extends GetxController implements GetxService {
   bool isLoading = false;
   int page = 1;
   List<String> staticBannerImage=[
-    "assets/images/room_type_game_select.png",
-    "assets/images/room_type_game_select.png",
-    "assets/images/room_type_game_select.png"
+    "https://th.bing.com/th/id/OIP.9Izv-aszItToTtEqRMSE0QHaE6?rs=1&pid=ImgDetMain",
+    "https://th.bing.com/th/id/OIP.9Izv-aszItToTtEqRMSE0QHaE6?rs=1&pid=ImgDetMain",
+    "https://th.bing.com/th/id/OIP.9Izv-aszItToTtEqRMSE0QHaE6?rs=1&pid=ImgDetMain"
   ];
   List<Banner>? mainBanners = [];
   List<Banner>? liftBanners = [];
@@ -32,69 +32,59 @@ class HomeController extends GetxController implements GetxService {
   ];
   List<RoomModel> homeRoomsStatic = [
     RoomModel(
-        id: 1,
-        name: "Music Lovers",
-        intro: "Welcome to the best music room!",
-        note: "Please respect others",
-        totalIncome: 5000,
-        cover: "https://example.com/cover1.jpg",
-        background: "https://example.com/bg1.jpg",
-        frame: "https://example.com/frame1.png",
-        type_name: "Music",
-        type_image: "https://example.com/music-icon.png",
-        hasPassword: false,
+        id: 2,
+        name: "Gaming Zone",
+        intro: "Pro gamers hangout!",
+        note: "No toxic behavior",
+        totalIncome: 3500,
+        cover: "https://th.bing.com/th/id/R.0973e118e3a625d59593832bb25b5394?rik=yuhldWToTI0How&pid=ImgRaw&r=0",
+        background: "https://th.bing.com/th/id/OIP.Ikqx6WLZ7jyCTR2encqBiwHaE8?rs=1&pid=ImgDetMain",
+        frame: "https://example.com/frame2.png",
+        type_name: "Gaming",
+        type_image: "https://example.com/gaming-icon.png",
+        hasPassword: true,
+        password: "123456",
         isUserRoomBlocked: false,
         isUserRoomChatBlocked: false,
         isUserRoomMicBlocked: false,
-        isOwner: true,
-        adminsCount: 3,
-        visitorsCount: 150,
+        isOwner: false,
+        adminsCount: 2,
+        visitorsCount: 75,
         owner: Owner(
-            id: 101,
-            uuid: 1001,
-            name: "John Doe",
-            image: "https://example.com/user1.jpg",
+            id: 102,
+            uuid: 1002,
+            name: "Jane Smith",
+            image: "https://example.com/user2.jpg",
             country: CountryModel(
-                id: 1,
-                name: "United States",
-                code: "US",
+              id: 2,
+              name: "United Kingdom",
+              code: "UK",
+              flag: "🇬🇧",
 
             )
         ),
         chairs: [
           Chairs(
-              id: 1,
+              id: 3,
               chairNo: 1,
-              icon: "https://example.com/chair1.png",
-              isLocked: 0,
+              icon: "https://example.com/chair3.png",
+              isLocked: 1,
               isMuted: 0,
               isFeatured: 1,
               isForAdmin: 1,
               teamNumber: 1,
               user: null
-          ),
-          Chairs(
-              id: 2,
-              chairNo: 2,
-              icon: "https://example.com/chair2.png",
-              isLocked: 0,
-              isMuted: 1,
-              isFeatured: 0,
-              isForAdmin: 0,
-              teamNumber: 1,
-              user: null
           )
         ]
     ),
-
     RoomModel(
         id: 2,
         name: "Gaming Zone",
         intro: "Pro gamers hangout!",
         note: "No toxic behavior",
         totalIncome: 3500,
-        cover: "https://example.com/cover2.jpg",
-        background: "https://example.com/bg2.jpg",
+        cover: "https://th.bing.com/th/id/R.0973e118e3a625d59593832bb25b5394?rik=yuhldWToTI0How&pid=ImgRaw&r=0",
+        background: "https://th.bing.com/th/id/OIP.Ikqx6WLZ7jyCTR2encqBiwHaE8?rs=1&pid=ImgDetMain",
         frame: "https://example.com/frame2.png",
         type_name: "Gaming",
         type_image: "https://example.com/gaming-icon.png",
@@ -133,15 +123,14 @@ class HomeController extends GetxController implements GetxService {
           )
         ]
     ),
-
     RoomModel(
         id: 3,
-        name: "Chat Café",
+        name: "friends",
         intro: "Casual conversations and fun",
         note: null,
         totalIncome: 2000,
-        cover: "https://example.com/cover3.jpg",
-        background: null,
+        cover: "https://th.bing.com/th/id/OIP.Ikqx6WLZ7jyCTR2encqBiwHaE8?rs=1&pid=ImgDetMain",
+        background: "https://th.bing.com/th/id/OIP.Ikqx6WLZ7jyCTR2encqBiwHaE8?rs=1&pid=ImgDetMain",
         frame: "https://example.com/frame3.png",
         type_name: "Social",
         type_image: "https://example.com/social-icon.png",

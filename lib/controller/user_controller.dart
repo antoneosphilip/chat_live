@@ -71,14 +71,14 @@ class UserController extends GetxController implements GetxService {
     ),
     senderLevel: Level(
       currentNo: 5,
-      currentImage: "assets/levels/level5.png",
+      currentImage: "https://th.bing.com/th/id/OIP.Ikqx6WLZ7jyCTR2encqBiwHaE8?rs=1&pid=ImgDetMain",
       nextNo: 6,
       nextImage: "assets/levels/level6.png",
       value: 75.0,
     ),
     consigneeLevel: Level(
       currentNo: 3,
-      currentImage: "assets/levels/level3.png",
+      currentImage: "https://th.bing.com/th/id/OIP.Ikqx6WLZ7jyCTR2encqBiwHaE8?rs=1&pid=ImgDetMain",
       nextNo: 4,
       nextImage: "assets/levels/level4.png",
       value: 50.0,
@@ -89,7 +89,7 @@ class UserController extends GetxController implements GetxService {
       name: "Test Family",
       introduce: "Welcome to our family",
       notice: "Family notice here",
-      image: "assets/family/image.png",
+      image: "https://th.bing.com/th/id/R.0973e118e3a625d59593832bb25b5394?rik=yuhldWToTI0How&pid=ImgRaw&r=0",
       points: 100,
       membersCount: 15,
     ),
@@ -115,7 +115,7 @@ class UserController extends GetxController implements GetxService {
       UserModel(
         id: 2,
         name: "Supporter 1",
-        image: "https://example.com/supporter1.png",
+        image: "https://th.bing.com/th/id/R.0973e118e3a625d59593832bb25b5394?rik=yuhldWToTI0How&pid=ImgRaw&r=0",
       ),
     ],
     hasFamily: true,
@@ -128,7 +128,7 @@ class UserController extends GetxController implements GetxService {
       name: "Ahmed Hassan",
       gender: "male",
       pio: "Living life to the fullest 🌟",
-      image: "https://example.com/profile.jpg",
+      image: "https://th.bing.com/th/id/OIP.IGNf7GuQaCqz_RPq5wCkPgHaLH?rs=1&pid=ImgDetMain",
       country: Country(
           id: 1,
           name: "Egypt",
@@ -182,14 +182,14 @@ class UserController extends GetxController implements GetxService {
       ),
       senderLevel: SenderLevel(
           currentNo: 5,
-          currentImage: "https://example.com/level5.png",
+          currentImage: "https://th.bing.com/th/id/OIP._vR-Bv_8LLQWY8hf2HRKhAHaE7?rs=1&pid=ImgDetMain",
           nextNo: 6,
           nextImage: "https://example.com/level6.png",
           value: 75.5
       ),
       consigneeLevel: SenderLevel(
           currentNo: 3,
-          currentImage: "https://example.com/level3.png",
+          currentImage: "https://th.bing.com/th/id/OIP._vR-Bv_8LLQWY8hf2HRKhAHaE7?rs=1&pid=ImgDetMain",
           nextNo: 4,
           nextImage: "https://example.com/level4.png",
           value: 45.2
@@ -197,13 +197,13 @@ class UserController extends GetxController implements GetxService {
       receivedGifts: [
         ReceivedGifts(
             giftId: 101,
-            thumbnail: "https://example.com/gift1.png",
+            thumbnail: "https://th.bing.com/th/id/OIP._vR-Bv_8LLQWY8hf2HRKhAHaE7?rs=1&pid=ImgDetMain",
             price: "500",
             totalQty: "10"
         ),
         ReceivedGifts(
             giftId: 102,
-            thumbnail: "https://example.com/gift2.png",
+            thumbnail: "https://th.bing.com/th/id/OIP._vR-Bv_8LLQWY8hf2HRKhAHaE7?rs=1&pid=ImgDetMain",
             price: "1000",
             totalQty: "5"
         )
@@ -211,13 +211,13 @@ class UserController extends GetxController implements GetxService {
       sentGifts: [
         SentGifts(
             giftId: 201,
-            thumbnail: "https://example.com/gift3.png",
+            thumbnail: "https://th.bing.com/th/id/OIP._vR-Bv_8LLQWY8hf2HRKhAHaE7?rs=1&pid=ImgDetMain",
             price: "750",
             totalQty: "8"
         ),
         SentGifts(
             giftId: 202,
-            thumbnail: "https://example.com/gift4.png",
+            thumbnail:"https://th.bing.com/th/id/OIP._vR-Bv_8LLQWY8hf2HRKhAHaE7?rs=1&pid=ImgDetMain",
             price: "1500",
             totalQty: "3"
         )
@@ -237,7 +237,7 @@ class UserController extends GetxController implements GetxService {
     fName: "John",
     lName: "Doe",
     email: "john.doe@example.com",
-    image: "https://example.com/profile.jpg",
+    image: "https://th.bing.com/th/id/OIP.IGNf7GuQaCqz_RPq5wCkPgHaLH?rs=1&pid=ImgDetMain",
     phone: "+1234567890",
     createdAt: "2024-12-01",
     password: "password123",
@@ -250,7 +250,7 @@ class UserController extends GetxController implements GetxService {
     userInfo: User(
       id: 101,
       fName: "Sample",
-      image: "",
+      image: "https://www.bing.com/th?id=OIP.IGNf7GuQaCqz_RPq5wCkPgHaLH&w=150&h=225&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
       email: 'test@gmail.com',
       lName: "User",
       phone: '010000'

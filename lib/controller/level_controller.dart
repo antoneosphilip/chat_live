@@ -11,19 +11,33 @@ class LevelController extends GetxController implements GetxService {
   List<LevelModel> senderLevelList = [];
   List<LevelModel> senderLevelListStatic = [
     LevelModel(
-      image: '',
+      image: 'https://cdn1.walsworthyearbooks.com/wyb/2019/09/05090507/Level-Up-Final-02-copy-1.jpg',
       title: 'test'
     ),
     LevelModel(
-        image: '',
+        image: 'https://cdn1.walsworthyearbooks.com/wyb/2019/09/05090507/Level-Up-Final-02-copy-1.jpg',
         title: 'test'
     ),LevelModel(
-        image: '',
+        image: 'https://cdn1.walsworthyearbooks.com/wyb/2019/09/05090507/Level-Up-Final-02-copy-1.jpg',
         title: 'test'
     )
   ];
 
   List<LevelModel> consigneeLevelList = [];
+  List<LevelModel> consigneeLevelListStatic = [
+    LevelModel(
+        image: 'https://cdn1.walsworthyearbooks.com/wyb/2019/09/05090507/Level-Up-Final-02-copy-1.jpg',
+        title: 'test'
+    ),
+    LevelModel(
+        image: 'https://cdn1.walsworthyearbooks.com/wyb/2019/09/05090507/Level-Up-Final-02-copy-1.jpg',
+        title: 'test'
+    ),LevelModel(
+        image: 'https://cdn1.walsworthyearbooks.com/wyb/2019/09/05090507/Level-Up-Final-02-copy-1.jpg',
+        title: 'test'
+    )
+  ];
+
   void setCurrentType(String type) async {
     currentType = type;
     await getLevelList();

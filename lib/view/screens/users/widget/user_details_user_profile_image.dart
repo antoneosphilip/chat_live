@@ -17,7 +17,8 @@ class UserDetailsBackGrounImage extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
                 image: NetworkImage(
-                    "${AppConstants.mediaUrl}/profile/${userController.userDetailsModelStatic?.image}"),
+                    // ${AppConstants.mediaUrl}/profile/
+                    "${userController.userDetailsModelStatic?.image}"),
                 fit: BoxFit.fill),
           ),
         ),

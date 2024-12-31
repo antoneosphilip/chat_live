@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:live_app/data/model/response/room_model.dart';
+import 'package:live_app/view/screens/room/agora/audio_room_Screen.dart';
 
+import '../../../../controller/home_controller.dart';
 import '../../../../controller/room_controller.dart';
 import '../../../../controller/splash_controller.dart';
 import '../../../../controller/user_controller.dart';
@@ -25,6 +27,7 @@ class SquareTopRoomsItem extends StatelessWidget {
         //     ? Get.find<RoomController>().joinRoom(room)
         //     : Get.find<RoomController>()
         //         .joinRoomAgora(room, Get.find<UserController>().userModel!);
+        Get.to(AudioRoomAgoraScreen(room: Get.find<HomeController>().homeRoomsStatic[0], userModel: Get.find<UserController>().userModelStatic! ));
       },
       child: MaskedImage(
         // frame: room.frame != null

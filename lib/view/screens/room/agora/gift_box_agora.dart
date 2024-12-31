@@ -55,7 +55,7 @@ class GiftBoxAgora extends StatelessWidget {
               borderRadius: BorderRadius.circular(50),
               color: ColorManger.primary,
             ),
-            child: Icon(Icons.settings,color: Colors.white,),
+            child: const Icon(Icons.settings,color: Colors.white,),
           ),
         ),
 

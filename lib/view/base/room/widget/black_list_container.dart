@@ -16,7 +16,7 @@ class BlackListContainer extends StatelessWidget {
     return GetBuilder<RoomController>(builder: (roomController) {
       return roomController.isLoading
           ? const LoadingIndicator()
-          : roomController.roomBlackListModel!.roomBlackListData!.isNotEmpty
+          : roomController.roomBlackListModelStatic!.roomBlackListData!.isNotEmpty
               ? SizedBox(
                   width: double.infinity,
                   height: 500.h,
@@ -64,7 +64,7 @@ class BlackListContainer extends StatelessWidget {
                               itemBuilder: (context, index) {
                                 return BlackListItem(
                                   roomBlackListData: roomController
-                                      .roomBlackListModel!
+                                      .roomBlackListModelStatic!
                                       .roomBlackListData![index],
                                   index: index,
                                 );
@@ -74,7 +74,7 @@ class BlackListContainer extends StatelessWidget {
                                   height: 10.h,
                                 );
                               },
-                              itemCount: roomController.roomBlackListModel!
+                              itemCount: roomController.roomBlackListModelStatic!
                                   .roomBlackListData!.length)
                         ],
                       ),

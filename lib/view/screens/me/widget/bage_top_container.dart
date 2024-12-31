@@ -31,7 +31,8 @@ class BageTopContainer extends StatelessWidget {
                   e.image != null
                       ? Image(
                     image: NetworkImage(
-                        "${AppConstants.baseUrl}/${e.image}"),
+                        // ${AppConstants.baseUrl}/
+                        "${e.image}"),
                     width: 20,
                     height: 20,
                   )

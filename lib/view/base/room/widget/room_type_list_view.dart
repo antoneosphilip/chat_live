@@ -25,13 +25,13 @@ class _RoomTypeListViewState extends State<RoomTypeListView> {
             return GestureDetector(
                 onTap: () {
                   widget.i = index;
-                  widget.roomController.typeId= widget.roomController.roomTypeList[index].id!;
+                  widget.roomController.typeId= widget.roomController.roomTypeListStatic[index].id!;
                   setState(() {});
                 },
                 child: RoomShapeItem(
-                  text: widget.roomController.roomTypeList[index].name!,
+                  text: widget.roomController.roomTypeListStatic[index].name!,
                   isSelected: widget.i == index,
-                  image: widget.roomController.roomTypeList[index].image!,
+                  image: widget.roomController.roomTypeListStatic[index].image!,
                 ));
           },
           separatorBuilder: (context, index) {
@@ -39,7 +39,7 @@ class _RoomTypeListViewState extends State<RoomTypeListView> {
               width: 15.w,
             );
           },
-          itemCount: widget.roomController.roomTypeList.length),
+          itemCount: widget.roomController.roomTypeListStatic.length),
     );
   }
 }

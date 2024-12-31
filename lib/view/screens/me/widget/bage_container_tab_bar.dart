@@ -67,7 +67,8 @@ class BageContainerTabBar extends StatelessWidget {
                                 height: 35,
                                 decoration: BoxDecoration(
                                   image: DecorationImage(
-                                    image: NetworkImage("${AppConstants.baseUrl}/${e.items?[index].thumbnail}"),
+                                    // ${AppConstants.baseUrl}/
+                                    image: NetworkImage("${e.items?[index].thumbnail}"),
                                     fit: BoxFit.cover,
                                   ),
                                 ),

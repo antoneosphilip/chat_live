@@ -66,7 +66,8 @@ class UserDetailsSections extends StatelessWidget {
                         width: 50,
                         height: 50,
                         image:
-                        "${AppConstants.mediaUrl}/gift/${e.thumbnail}",
+                        //${AppConstants.mediaUrl}/gift/
+                        "${e.thumbnail}",
                       ),
                       SizedBox(
                         height: 5.h,

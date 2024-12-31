@@ -16,6 +16,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:zego_uikit_prebuilt_live_audio_room/zego_uikit_prebuilt_live_audio_room.dart';
 
 import '../data/api/api_checker.dart';
+import '../data/model/response/country_model.dart';
 import '../data/model/response/get_back_ground_model.dart';
 import '../data/model/response/get_black_list_model.dart';
 import '../data/model/response/gift_model.dart';
@@ -40,11 +41,270 @@ class RoomController extends GetxController implements GetxService {
   RoomController({required this.roomRepo});
 
   RoomBlackListModel? roomBlackListModel;
-  GetBackGroundModel? getBackGroundList;
+  RoomBlackListModel? roomBlackListModelStatic=RoomBlackListModel(
+    success: true,
+    status: 200,
+    message: "Sample data loaded successfully.",
+    roomBlackListData: [
+      RoomBlackListData(
+        id: 1,
+        reason: "Spamming",
+        type: "Temporary",
+        addedAt: "2024-01-01T00:00:00Z",
+        endAt: "2024-01-10T00:00:00Z",
 
+      ),
+    ],
+  );
+
+  GetBackGroundModel? getBackGroundList;
+  GetBackGroundModel? getBackGroundListStatic = GetBackGroundModel(
+      success: true,
+      status: 200,
+      message: "Success",
+      backGroundList: [
+        BackGroundItems(
+            id: 1,
+            image: "https://th.bing.com/th/id/OIP.hFqtKlECEw7qTnocu1ojiQHaEK?rs=1&pid=ImgDetMain",
+            thumbnail: "https://th.bing.com/th/id/OIP.hFqtKlECEw7qTnocu1ojiQHaEK?rs=1&pid=ImgDetMain",
+            price: "100"
+        ),
+        BackGroundItems(
+            id: 2,
+            image: "https://th.bing.com/th/id/OIP.hFqtKlECEw7qTnocu1ojiQHaEK?rs=1&pid=ImgDetMain",
+            thumbnail: "https://th.bing.com/th/id/OIP.hFqtKlECEw7qTnocu1ojiQHaEK?rs=1&pid=ImgDetMain",
+            price: "200"
+        ),
+        BackGroundItems(
+            id: 3,
+            image: "https://th.bing.com/th/id/OIP.hFqtKlECEw7qTnocu1ojiQHaEK?rs=1&pid=ImgDetMain",
+            thumbnail: "https://th.bing.com/th/id/OIP.hFqtKlECEw7qTnocu1ojiQHaEK?rs=1&pid=ImgDetMain",
+            price: "150"
+        ),
+
+      ]
+  );
   UserController userController = Get.find();
   RoomModel? inRoom;
+  RoomModel? inRoomStatic = RoomModel(
+    id: 1001,
+    name: "Welcome Room",
+    intro: "A friendly place to chat and connect",
+    note: "Please follow room guidelines",
+    totalIncome: 5000,
+    cover: "https://example.com/room_cover.jpg",
+    background: "https://example.com/room_bg.jpg",
+    frame: "https://example.com/frame.png",
+    password: null,
+    type_name: "Public",
+    type_image: "https://example.com/public_room.png",
+    hasPassword: false,
+    isUserRoomBlocked: false,
+    isUserRoomChatBlocked: false,
+    isUserRoomMicBlocked: false,
+    isOwner: true,
+    adminsCount: 3,
+    visitorsCount: 25,
+    owner: Owner(
+      id: 101,
+      uuid: 1234567,
+      name: "Room Admin",
+      image: "https://example.com/admin_avatar.jpg",
+      country: CountryModel(
+        id: 1,
+        name: "United States",
+        code: "US",
+        timeZone: "UTC-5",
+        flag: "🇺🇸",
+
+      ),
+    ),
+    chairs: [
+      Chairs(
+        id: 1,
+        chairNo: 1,
+        icon: "https://example.com/chair1.png",
+        isLocked: 0,
+        isMuted: 0,
+        isFeatured: 1,
+        isForAdmin: 1,
+        teamNumber: 1,
+        user: null,
+      ),
+      Chairs(
+        id: 2,
+        chairNo: 2,
+        icon: "https://example.com/chair2.png",
+        isLocked: 0,
+        isMuted: 0,
+        isFeatured: 0,
+        isForAdmin: 1,
+        teamNumber: 1,
+        user: null,
+      ),
+      Chairs(
+        id: 3,
+        chairNo: 3,
+        icon: "https://example.com/chair3.png",
+        isLocked: 0,
+        isMuted: 0,
+        isFeatured: 0,
+        isForAdmin: 1,
+        teamNumber: 1,
+        user: null,
+      ),
+      Chairs(
+        id: 4,
+        chairNo: 4,
+        icon: "https://example.com/chair4.png",
+        isLocked: 0,
+        isMuted: 0,
+        isFeatured: 0,
+        isForAdmin: 0,
+        teamNumber: 1,
+        user: null,
+      ),
+      Chairs(
+        id: 5,
+        chairNo: 5,
+        icon: "https://example.com/chair5.png",
+        isLocked: 0,
+        isMuted: 0,
+        isFeatured: 0,
+        isForAdmin: 0,
+        teamNumber: 2,
+        user: null,
+      ),
+      Chairs(
+        id: 6,
+        chairNo: 6,
+        icon: "https://example.com/chair6.png",
+        isLocked: 0,
+        isMuted: 0,
+        isFeatured: 0,
+        isForAdmin: 0,
+        teamNumber: 2,
+        user: null,
+      ),
+      Chairs(
+        id: 7,
+        chairNo: 7,
+        icon: "https://example.com/chair7.png",
+        isLocked: 0,
+        isMuted: 0,
+        isFeatured: 0,
+        isForAdmin: 0,
+        teamNumber: 2,
+        user: null,
+      ),
+      Chairs(
+        id: 8,
+        chairNo: 8,
+        icon: "https://example.com/chair8.png",
+        isLocked: 1,
+        isMuted: 0,
+        isFeatured: 0,
+        isForAdmin: 0,
+        teamNumber: 2,
+        user: null,
+      ),
+      Chairs(
+        id: 9,
+        chairNo: 9,
+        icon: "https://example.com/chair9.png",
+        isLocked: 1,
+        isMuted: 0,
+        isFeatured: 0,
+        isForAdmin: 0,
+        teamNumber: 2,
+        user: null,
+      ),
+      Chairs(
+        id: 10,
+        chairNo: 10,
+        icon: "https://example.com/chair10.png",
+        isLocked: 1,
+        isMuted: 0,
+        isFeatured: 0,
+        isForAdmin: 0,
+        teamNumber: 2,
+        user: null,
+      ),
+    ],
+  );
+
   ShowRoomModel? showRoomModel;
+  ShowRoomModel? showRoomModelStatic = ShowRoomModel(
+    showRoomData: ShowRoomData(
+      id: 1001,
+      name: "Welcome Room",
+      intro: "A friendly place to chat and connect",
+      note: "Please follow room guidelines",
+      totalIncome: 5000,
+      cover: "https://example.com/room_cover.jpg",
+      background: "https://example.com/room_bg.jpg",
+      frame: "https://example.com/frame.png",
+      typeImage: "https://example.com/type_image.png",
+      password: null,
+      typeName: "Public Room",
+      hasPassword: false,
+      isUserRoomBlocked: false,
+      isUserRoomChatBlocked: false,
+      isUserRoomMicBlocked: false,
+
+      isOwner: true,
+      adminsCount: 2,
+      visitorsCount: 3,
+      chairsCount: 10,
+      admins: [
+        Admin(
+          id: 101,
+          uuid: 1001,
+          name: "Admin One",
+          gender: "male",
+          pio: "Room Admin",
+          image: "https://example.com/admin1.jpg",
+          country: "USA",
+          balance: 1000,
+          friendsCount: 150,
+          friendRequestsCount: 5,
+          followersCount: 300,
+          followingsCount: 200,
+          visitorsCount: 450,
+          newVisitsCount: 10,
+          isFollowed: false,
+          isFriend: true,
+          amISentFriendRequest: false,
+          isHeSentFriendRequest: false,
+
+        ),
+      ],
+      chairs: [
+        Chair(
+          id: 1,
+          chairNo: 1,
+          icon: "https://example.com/chair1.png",
+          isLocked: false,
+          isMuted: false,
+          isFeatured: true,
+          isForAdmin: true,
+          teamNumber: 1,
+          user: null,
+        ),
+        Chair(
+          id: 2,
+          chairNo: 2,
+          icon: "https://example.com/chair2.png",
+          isLocked: false,
+          isMuted: false,
+          isFeatured: false,
+          isForAdmin: true,
+          teamNumber: 1,
+          user: null,
+        ),
+      ],
+    ),
+  );
 
   UserModel? user;
   List<RoomModel> inHomeRoomList = [];
@@ -53,6 +313,23 @@ class RoomController extends GetxController implements GetxService {
   List<UserModel> visitors = [];
   List<UserModel> onMicUsers = [];
   List<RoomTypeModel> roomTypeList = [];
+  List<RoomTypeModel> roomTypeListStatic = [
+    RoomTypeModel(
+      name: "test1",
+      id: 1,
+      image: 'https://www.bing.com/th?id=OIP.IGNf7GuQaCqz_RPq5wCkPgHaLH&w=150&h=225&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2',
+      title: 'test1',
+      thumbnail:'https://www.bing.com/th?id=OIP.IGNf7GuQaCqz_RPq5wCkPgHaLH&w=150&h=225&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2'
+    ),
+    RoomTypeModel(
+        name: "test2",
+        id: 1,
+        image: 'https://www.bing.com/th?id=OIP.IGNf7GuQaCqz_RPq5wCkPgHaLH&w=150&h=225&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2',
+        title: 'test2',
+        thumbnail:'https://www.bing.com/th?id=OIP.IGNf7GuQaCqz_RPq5wCkPgHaLH&w=150&h=225&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2'
+    ),
+  ];
+
   List<Map<String, dynamic>> mics = [];
   bool isLoading = false;
   List<int> initializedHomePages = [];

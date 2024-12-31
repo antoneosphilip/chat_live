@@ -156,7 +156,7 @@ class _UserFamilyScreenState extends State<UserFamilyScreen> {
                                           showDialog(
                                               context: context,
                                               builder: (context) {
-                                                return JoinFamilyMessage(
+                                                return const JoinFamilyMessage(
                                                   message:"test"
                                                   // familyController.errorMessage,
                                                 );

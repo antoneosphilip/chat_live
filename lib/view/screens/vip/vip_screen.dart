@@ -48,7 +48,7 @@ class _VipScreenState extends State<VipScreen> {
             child: GetBuilder<VipController>(
               builder: (vipController) {
                 // vipController.isLoading == true
-                if (false) {
+                if (vipController.isLoading == true) {
                   return const Center(
                         child: LoadingIndicator(),
                       );
@@ -162,12 +162,14 @@ class _VipScreenState extends State<VipScreen> {
                                                         'animated') {
                                                       content = SVGASimpleImage(
                                                         resUrl:
-                                                            "${AppConstants.baseUrl}/${vipController.selectedVipStatic!.privileges![index].image}",
+                                                            // ${AppConstants.baseUrl}/
+                                                            "${vipController.selectedVipStatic!.privileges![index].image}",
                                                       );
                                                     } else {
                                                       content = CustomImage(
                                                           image:
-                                                              "${AppConstants.baseUrl}/${vipController.selectedVipStatic!.privileges![index].image}");
+                                                              // ${AppConstants.baseUrl}/
+                                                              "${vipController.selectedVipStatic!.privileges![index].image}");
                                                     }
                                                   } else {
                                                     String? color =
@@ -210,7 +212,8 @@ class _VipScreenState extends State<VipScreen> {
                                                       height: 30,
                                                       width: 30,
                                                       image:
-                                                          "${AppConstants.baseUrl}/${vipController.selectedVipStatic!.privileges![index].thumbnail}",
+                                                          // ${AppConstants.baseUrl}/
+                                                          "${vipController.selectedVipStatic!.privileges![index].thumbnail}",
                                                     ),
                                                     SizedBox(
                                                       height: 10.h,

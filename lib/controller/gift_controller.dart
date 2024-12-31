@@ -19,7 +19,73 @@ class GiftController extends GetxController implements GetxService {
 
   UserController userController = Get.find();
   List<GiftModel> gift_list = [];
+  List<GiftModel> gift_listStatic = [
+    GiftModel(
+      id: 1,
+      name: "Golden Rose",
+      price: "10.00",
+      points: 100,
+      vipLevel: 2,
+      thumbnail: "https://th.bing.com/th/id/OIP.0TyMzIxLzR-esPkAB0Fy6wHaE8?rs=1&pid=ImgDetMain",
+      image: "https://th.bing.com/th/id/OIP.0TyMzIxLzR-esPkAB0Fy6wHaE8?rs=1&pid=ImgDetMain",
+      type: 1,
+      status: 1,
+      broadcastingStatus: 1,
+      isLocked: false,
+    ),
+    GiftModel(
+      id: 2,
+      name: "Silver Crown",
+      price: "20.00",
+      points: 200,
+      vipLevel: 3,
+      thumbnail: "https://th.bing.com/th/id/OIP.0TyMzIxLzR-esPkAB0Fy6wHaE8?rs=1&pid=ImgDetMain",
+      image: "https://th.bing.com/th/id/OIP.0TyMzIxLzR-esPkAB0Fy6wHaE8?rs=1&pid=ImgDetMain",
+      type: 2,
+      status: 1,
+      broadcastingStatus: 0,
+      isLocked: true,
+    ),
+    GiftModel(
+      id: 3,
+      name: "Diamond Ring",
+      price: "50.00",
+      points: 500,
+      vipLevel: 5,
+      thumbnail: "https://th.bing.com/th/id/OIP.0TyMzIxLzR-esPkAB0Fy6wHaE8?rs=1&pid=ImgDetMain",
+      image: "https://th.bing.com/th/id/OIP.0TyMzIxLzR-esPkAB0Fy6wHaE8?rs=1&pid=ImgDetMain",
+      type: 3,
+      status: 1,
+      broadcastingStatus: 1,
+      isLocked: false,
+    ),
+  ];
+
   List<GiftType> gift_type_list = [];
+  List<GiftType> gift_type_listStatic = [
+    GiftType(
+      id: 1,
+      slug: "flowers",
+      name: "Flowers",
+    ),
+    GiftType(
+      id: 2,
+      slug: "crowns",
+      name: "Crowns",
+    ),
+    GiftType(
+      id: 3,
+      slug: "jewelry",
+      name: "Jewelry",
+    ),
+    GiftType(
+      id: 4,
+      slug: "special",
+      name: "Special Gifts",
+    ),
+  ];
+
+
   int? selectedGiftId = 0;
   List<String> selectedUserIds = [];
   int? selectedTypeId = 1;

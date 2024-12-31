@@ -31,7 +31,7 @@ void showBackGroundRoom(BuildContext context) {
                   child: roomController.isLoading
                       ? const LoadingIndicator()
                       : roomController
-                              .getBackGroundList!.backGroundList!.isNotEmpty
+                              .getBackGroundListStatic!.backGroundList!.isNotEmpty
                           ? Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -57,7 +57,7 @@ void showBackGroundRoom(BuildContext context) {
                                     children: [
                                       RoomBackGroundListView(
                                         backGroundList: roomController
-                                            .getBackGroundList!.backGroundList!,
+                                            .getBackGroundListStatic!.backGroundList!,
                                       ),
                                     ],
                                   ),

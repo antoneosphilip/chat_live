@@ -39,8 +39,10 @@ class UserMineImage extends StatelessWidget {
                   child: CustomImage(
                     placeholder: Images.guestIconLight,
                     // && isLoggedIn
-                    image: '${AppConstants.mediaUrl}/profile'
-                        '/${(userController.userInfoStatic != null ) ? userController.userInfoStatic!.image : ''}',
+                    //
+                    // ${AppConstants.mediaUrl}/profile
+                    image:
+                        '${(userController.userInfoStatic != null ) ? userController.userInfoStatic!.image : ''}',
                     height: 70,
                     width: 70,
                     fit: BoxFit.cover,

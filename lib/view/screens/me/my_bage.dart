@@ -24,7 +24,8 @@ class _MyBagScreenState extends State<MyBagScreen> {
   @override
   void initState() {
     super.initState();
-    if (Get.find<MyBagController>().typesListStatic.isEmpty) {
+    // Get.find<MyBagController>().typesListStatic.isEmpty
+    if (true) {
       Get.find<MyBagController>().getTypes();
     }
   }
@@ -35,7 +36,7 @@ class _MyBagScreenState extends State<MyBagScreen> {
       child: Scaffold(
         body: GetBuilder<MyBagController>(
           builder: (controller) {
-            if (false) {
+            if (controller.loading) {
               return LoadingIndicator();
             } else {
               return Container(

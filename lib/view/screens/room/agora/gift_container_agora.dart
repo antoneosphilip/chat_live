@@ -175,7 +175,7 @@ class _GiftContainerAgoraState extends State<GiftContainerAgora> {
                           height: 30,
                           child: ListView.builder(
                               scrollDirection: Axis.horizontal,
-                              itemCount: giftController.gift_type_list.length,
+                              itemCount: giftController.gift_type_listStatic.length,
                               itemBuilder: (context, index) {
                                 return Padding(
                                   padding: EdgeInsets.symmetric(horizontal: 5),
@@ -183,12 +183,12 @@ class _GiftContainerAgoraState extends State<GiftContainerAgora> {
                                     onTap: () {
                                       giftController.getGiftList(
                                           type: giftController
-                                              .gift_type_list[index].id);
+                                              .gift_type_listStatic[index].id);
                                     },
                                     child: Container(
                                       decoration: BoxDecoration(
                                           color: giftController
-                                              .gift_type_list[index]
+                                              .gift_type_listStatic[index]
                                               .id ==
                                               giftController.selectedTypeId
                                               ? Colors.indigoAccent
@@ -198,7 +198,7 @@ class _GiftContainerAgoraState extends State<GiftContainerAgora> {
                                       padding: const EdgeInsets.all(8.0),
                                       child: Center(
                                         child: Text(
-                                          '${giftController.gift_type_list[index].name}',
+                                          '${giftController.gift_type_listStatic[index].name}',
                                           style: TextStyle(color: Colors.white),
                                         ),
                                       ),
@@ -213,7 +213,7 @@ class _GiftContainerAgoraState extends State<GiftContainerAgora> {
                         // Use Expanded instead of Flexible
                           child: GridView.builder(
                             controller:widget.scrollController,
-                            itemCount: giftController.gift_list.length,
+                            itemCount: giftController.gift_listStatic.length,
                             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 4,
                               crossAxisSpacing: 10,
@@ -225,7 +225,7 @@ class _GiftContainerAgoraState extends State<GiftContainerAgora> {
                                   InkWell(
                                     onTap: () {
                                       giftController.selectGift(
-                                          giftController.gift_list[index].id);
+                                          giftController.gift_listStatic[index].id);
                                     },
                                     child: Container(
                                         padding: EdgeInsets.all(2),
@@ -234,7 +234,7 @@ class _GiftContainerAgoraState extends State<GiftContainerAgora> {
                                               color:
                                               giftController.selectedGiftId ==
                                                   giftController
-                                                      .gift_list[index].id
+                                                      .gift_listStatic[index].id
                                                   ? Colors.yellow
                                                   : Colors.blueGrey,
                                             ),
@@ -248,7 +248,7 @@ class _GiftContainerAgoraState extends State<GiftContainerAgora> {
                                           children: [
                                             Center(
                                               child: Text(
-                                                "${giftController.gift_list[index].name}",
+                                                "${giftController.gift_listStatic[index].name}",
                                                 style: TextStyle(
                                                     color: Colors.white,
                                                     fontSize: 10),
@@ -260,7 +260,8 @@ class _GiftContainerAgoraState extends State<GiftContainerAgora> {
                                               decoration: BoxDecoration(
                                                 image: DecorationImage(
                                                   image: NetworkImage(
-                                                      "${AppConstants.baseUrl}/${AppConstants.mediaPath}/${giftController.gift_list[index].thumbnail}"),
+                                                      // ${AppConstants.baseUrl}/${AppConstants.mediaPath}/
+                                                      "${giftController.gift_listStatic[index].thumbnail}"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -270,18 +271,18 @@ class _GiftContainerAgoraState extends State<GiftContainerAgora> {
                                               MainAxisAlignment.spaceAround,
                                               children: [
                                                 Container(
-                                                  child: Text(
-                                                    '${giftController.gift_list[index].price}',
-                                                    style: TextStyle(
-                                                        color: Colors.white,
-                                                        fontSize: 10),
-                                                  ),
                                                   padding: EdgeInsets.symmetric(
                                                       vertical: 1, horizontal: 3),
                                                   decoration: BoxDecoration(
                                                       color: Colors.teal,
                                                       borderRadius:
                                                       BorderRadius.circular(3)),
+                                                  child: Text(
+                                                    '${giftController.gift_listStatic[index].price}',
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 10),
+                                                  ),
                                                 ),
                                                 Image(
                                                   image: AssetImage(
@@ -294,7 +295,7 @@ class _GiftContainerAgoraState extends State<GiftContainerAgora> {
                                           ],
                                         )),
                                   ),
-                                  (giftController.gift_list[index].isLocked == true)
+                                  (giftController.gift_listStatic[index].isLocked == true)
                                       ? LockLayer()
                                       : Container()
                                 ],

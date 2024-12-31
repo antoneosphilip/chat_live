@@ -41,7 +41,9 @@ class UserNameId extends StatelessWidget {
             children: [
               CustomImage(
                 image:
-                '${AppConstants.baseUrl}/${userController.userModelStatic?.senderLevel?.currentImage}',
+                //     ${AppConstants.baseUrl}/
+
+                '${userController.userModelStatic?.senderLevel?.currentImage}',
                 width: 40,
               ),
               const SizedBox(
@@ -49,7 +51,8 @@ class UserNameId extends StatelessWidget {
               ),
               CustomImage(
                 image:
-                '${AppConstants.baseUrl}/${userController.userModelStatic?.consigneeLevel?.currentImage}',
+                //     ${AppConstants.baseUrl}/
+                '${userController.userModelStatic?.consigneeLevel?.currentImage}',
                 width: 40,
               ),
             ],

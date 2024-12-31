@@ -173,8 +173,8 @@ class Admin {
   Room? ownRoom;
   Room? inRoom;
   Wallet? wallet;
-  Level senderLevel;
-  Level consigneeLevel;
+  Level? senderLevel;
+  Level? consigneeLevel;
   DateTime? time;
 
   Admin({
@@ -199,8 +199,9 @@ class Admin {
     this.ownRoom,
     this.inRoom,
     this.wallet,
-    required this.senderLevel,
-    required this.consigneeLevel,
+    //required
+     this.senderLevel,
+     this.consigneeLevel,
     this.time,
   });
 

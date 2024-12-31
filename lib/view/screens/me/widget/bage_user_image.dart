@@ -24,7 +24,8 @@ class BageUserImage extends StatelessWidget {
             CircleAvatar(
               radius: 35,
               backgroundImage: NetworkImage(
-                  "${AppConstants.mediaUrl}/profile/${Get.find<UserController>().userInfoModel?.image}"),
+                  // ${AppConstants.mediaUrl}/profile/
+                  "${Get.find<UserController>().userModelStatic?.image}"),
             ),
             SizedBox(
               width: 120.w,

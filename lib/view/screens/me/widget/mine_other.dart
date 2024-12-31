@@ -169,9 +169,7 @@ class MineOther extends StatelessWidget {
                       image:
                       'assets/icon/policy.webp',
                       onTap: () {
-                        Get.toNamed(RouteHelper
-                            .getHtmlRoute(
-                            'privacy-policy'));
+                        Get.toNamed(RouteHelper.privacyPolicy);
                       },
                     ),
                     ImageButton(

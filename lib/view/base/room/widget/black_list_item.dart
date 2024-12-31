@@ -45,7 +45,7 @@ class BlackListItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              roomBlackListData.user?.name!??"",
+              roomBlackListData.user?.name!??"name",
               style: robotoLargeBold.copyWith(fontWeight: FontWeight.w500),
             ),
             Container(

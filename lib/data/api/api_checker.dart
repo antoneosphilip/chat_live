@@ -10,8 +10,8 @@ class ApiChecker {
       Get.offAllNamed(RouteHelper.getSignInRoute(RouteHelper.splash));
     } else {
       if (response.body == null) {
-        showCustomSnackBar("can't connect to server".tr,
-            getXSnackBar: getXSnackBar);
+        // showCustomSnackBar("can't connect to server".tr,
+        //     getXSnackBar: getXSnackBar);
       } else {
         isList? showCustomSnackBar((response.body['errors'][0]['message']),
             getXSnackBar: getXSnackBar):showCustomSnackBar((response.body['error']),

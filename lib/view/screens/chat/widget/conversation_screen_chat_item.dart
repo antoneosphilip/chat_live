@@ -178,7 +178,8 @@ class ConversationScreenChatListview extends StatelessWidget {
                       height: 50,
                       width: 50,
                       image:
-                      '$baseUrl/${user != null ? user.image : ''}',
+                      //     $baseUrl/
+                      '${user != null ? user.image : ''}',
                     ),
                   ),
                   const SizedBox(

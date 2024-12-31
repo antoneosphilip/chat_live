@@ -75,10 +75,12 @@ class RoomListItem extends StatelessWidget {
                     BoxDecoration(borderRadius: BorderRadius.circular(16.r)),
                 child: MaskedImage(
                   frame: room.frame != null
-                      ? "${AppConstants.mediaUrl}/${room.frame}"
+                      ? "${room.frame}"
+                      // ${AppConstants.mediaUrl}/${room.frame}
                       : null,
                   image:
-                      "${AppConstants.baseUrl}/${AppConstants.mediaPath}/${room.cover}",
+                      "${room.cover}",
+                  // ${AppConstants.baseUrl}/${AppConstants.mediaPath}/${room.cover}
                   isLocked: room.hasPassword == true,
                 ),
               ),
@@ -87,7 +89,7 @@ class RoomListItem extends StatelessWidget {
               width: 10.w,
             ),
             Padding(
-              padding: EdgeInsets.only(left: 120),
+              padding: EdgeInsets.only(left: 120.w),
               child: Container(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -190,15 +192,17 @@ class RoomListItem extends StatelessWidget {
                             children: [
                               CustomImage(
                                 image:
-                                    '${AppConstants.baseUrl}/${Get.find<UserController>().userModel?.senderLevel?.currentImage}',
+                                    '${Get.find<UserController>().userModelStatic?.senderLevel?.currentImage}',
+                                // ${AppConstants.baseUrl}/
                                 width: 40,
                               ),
                               SizedBox(
-                                width: 8,
+                                width: 8.w,
                               ),
                               CustomImage(
                                 image:
-                                    '${AppConstants.baseUrl}/${Get.find<UserController>().userModel?.consigneeLevel?.currentImage}',
+                                    // ${AppConstants.baseUrl}
+                                    '${Get.find<UserController>().userModelStatic?.consigneeLevel?.currentImage}',
                                 width: 40,
                               ),
                             ],
